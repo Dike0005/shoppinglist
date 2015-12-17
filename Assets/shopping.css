@@ -1,0 +1,104 @@
+/***** Colors *****/
+/*
+Post it note Yellow #FFFFA5
+White #ffffff
+*/
+
+
+*{
+padding: auto 0;
+margin: auto 0;
+}
+
+body {
+  font-family: "Verdana", arial;
+  background-color: #FFFFA5; 
+  background-size: 100%
+}
+
+footer{
+
+margin-bottom: 30%;
+
+}
+
+header{
+margin-top: 20%;
+margin-bottom: 10%;
+}
+
+.container {
+  background-color: #FFFFA5;
+  width: 70%;
+  margin: 0 auto;
+  display: table;
+}
+
+input {
+  display: block;
+  width: 100%;
+  line-height: 2;
+  padding: 0 0 10px 10px;
+  outline:0;
+  border: 5px solid black;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 2em;
+  line-height: 1;
+}
+
+
+
+/***** List styling *****/
+/***** 
+once the item is clicked on, a line goes through and it turns green.
+*****/
+
+ul {
+  list-style:decimal;
+  margin: 0;
+  padding: 0;
+ ul li {
+    margin-top: 5px;
+    padding: 0 0;
+    border: 3px solid black;
+      
+    &:before {
+      padding: 10px 10px;
+      font-size: 20px;
+    }
+   
+    &:hover {
+      cursor:pointer;
+      text-decoration: line-through;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+
+/*****  Click again and a red dialogue box that says (erase) pops up and lets you delete it completely *****/
+
+
+.bought {
+  color:red;
+    &:before {
+/***** the &#2713 is a checkmark *****/
+      content: "&#x2713";
+      font-size: 20px;
+      padding: 5px 5px;
+    }
+    
+    &:hover {
+      text-decoration: line-through;
+      &:after {
+        color: red;
+        content: "(erase)";
+        text-align: right;
+      }
+    }
+}
